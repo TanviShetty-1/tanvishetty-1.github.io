@@ -472,15 +472,40 @@ footer p{font-size:0.72rem;color:rgba(255,255,255,0.25)}
 
 
 <!-- SIDE PROJECTS -->
+<style>
+  /* This ensures the grid stays 2 columns and the 3rd project spans both */
+  #side-projects .side-proj-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px; /* Matches your existing border-style grid */
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .side-proj-wide {
+    grid-column: span 2;
+  }
+
+  /* Responsive: Stack them all on mobile */
+  @media (max-width: 900px) {
+    #side-projects .side-proj-grid {
+      grid-template-columns: 1fr;
+    }
+    .side-proj-wide {
+      grid-column: span 1;
+    }
+  }
+</style>
+
 <section class="sec" id="side-projects">
   <div class="sec-head">
     <p class="sec-label">Building on the Side</p>
     <h2 class="sec-title">Independent Projects</h2>
     <p class="sec-lead">Beyond my program management work, I prototype and build AI-powered tools independently — putting product instinct into practice and staying sharp on the builder side of technology.</p>
   </div>
+  
   <div class="side-proj-grid">
-
-    <div class="side-proj-card side-proj-featured">
+    <div class="side-proj-card">
       <div class="side-proj-top">
         <div class="side-proj-meta">
           <span class="side-proj-status">&#9679; Actively Building</span>
@@ -495,13 +520,12 @@ footer p{font-size:0.72rem;color:rgba(255,255,255,0.25)}
       <p class="side-proj-desc">A personal project born from daily AI work — a centralized hub for organizing, managing, and reusing prompts across AI workflows. Built independently using Lovable, it reflects the same belief I bring to program management: that the right structure and tooling unlock dramatically better outcomes.</p>
       <div class="side-proj-why">
         <p class="side-proj-why-label">Why it matters for PMs</p>
-        <p class="side-proj-why-text">Prompt engineering is quickly becoming a core PM skill. Building this tool gives me both hands-on product development experience and deep fluency in AI workflow design — the exact intersection of operational and technical thinking I bring to every role.</p>
+        <p class="side-proj-why-text">Prompt engineering is quickly becoming a core PM skill. Building this tool gives me both hands-on product development experience and deep fluency in AI workflow design — the exact intersection of operational and technical thinking.</p>
       </div>
       <div class="side-proj-stack">
-        <span class="side-proj-tag">Lovable (AI-assisted dev)</span>
+        <span class="side-proj-tag">Lovable</span>
         <span class="side-proj-tag">Prompt Engineering</span>
         <span class="side-proj-tag">AI Workflow Design</span>
-        <span class="side-proj-tag">Product Prototyping</span>
       </div>
     </div>
 
@@ -525,8 +549,8 @@ footer p{font-size:0.72rem;color:rgba(255,255,255,0.25)}
         <span class="side-proj-tag">Prototype</span>
       </div>
     </div>
------------------------------
-    <div class="side-proj-card">
+
+    <div class="side-proj-card side-proj-wide">
       <div class="side-proj-top">
         <div class="side-proj-meta">
           <span class="side-proj-status">&#9679; Published</span>
@@ -541,20 +565,20 @@ footer p{font-size:0.72rem;color:rgba(255,255,255,0.25)}
       <p class="side-proj-desc">A deep-dive data visualization project that transforms complex market datasets into actionable executive summaries. This project showcases the ability to bridge the gap between raw data and business strategy.</p>
   
       <div class="side-proj-why">
-      <p class="side-proj-why-label">The Operational Edge</p>
-      <p class="side-proj-why-text">Effective program management relies on clear data storytelling. Developing this dashboard refined my ability to identify key KPIs and present them in a way that drives immediate leadership alignment.</p>
-    </div>
+        <p class="side-proj-why-label">The Operational Edge</p>
+        <p class="side-proj-why-text">Effective program management relies on clear data storytelling. Developing this dashboard refined my ability to identify key KPIs and present them in a way that drives immediate leadership alignment and operational clarity.</p>
+      </div>
   
       <div class="side-proj-stack">
-      <span class="side-proj-tag">Power BI</span>
-      <span class="side-proj-tag">Python</span>
-      <span class="side-proj-tag">SQL</span>
-      <span class="side-proj-tag">User Experience</span>
+        <span class="side-proj-tag">Power BI</span>
+        <span class="side-proj-tag">Python</span>
+        <span class="side-proj-tag">SQL</span>
+        <span class="side-proj-tag">User Experience</span>
+      </div>
     </div>
   </div>
-    --------------------
-  </div>
-  <p class="side-proj-note">Both built independently using Lovable — an AI-assisted development platform. Proof that curiosity and initiative don't stop at the end of the working day.</p>
+  
+  <p class="side-proj-note">Independent projects built using modern AI-assisted development platforms — proof that curiosity and initiative drive continuous learning and technical adaptability.</p>
 </section>
 
 <!-- CERTIFICATIONS -->
